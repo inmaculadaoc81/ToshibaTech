@@ -56,3 +56,26 @@ Las variables antiguas (GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET,
 GOOGLE_REFRESH_TOKEN, GOOGLE_EMAIL) ya no se usan y pueden eliminarse de
 Vercel. package.json actualizado: quitada la dependencia "googleapis",
 añadida "nodemailer".
+
+REVISIÓN ADICIONAL (esta pasada):
+- H1 de portada no seguía la regla final de la familia: era solo el
+  nombre de la marca + tagline ("ToshibaTech | Reparación de
+  ordenadores Dynabook , portátiles"), sin ser una frase afirmativa
+  sobre el problema/servicio. Reescrito: "Tu Toshiba no enciende.
+  Diagnóstico gratuito en Madrid." (8 palabras, distinto del H1 de
+  ToshibaWEB2 — "Tu Dynabook no funciona..." — para no repetir
+  redacción entre repos de la misma familia de marca). Solo se ha
+  tocado el H1 de la home; las 20 páginas de /servicios/ y 26 de
+  /modelos/ mantienen sus propios H1 específicos de cada página, que
+  no siguen esta regla (son páginas de contenido, no la portada).
+- Verificado: schema.org ya usaba correctamente el teléfono de la caja
+  de información (+34 910 05 37 53), no el número compartido de los
+  botones (+34 914 46 85 03); no se ha tocado.
+- Confirmado: GA y banner de cookies siguen presentes en las 49
+  páginas (verificado por conteo), sin regresiones.
+
+⚠️ RECORDATORIO — sigue sin resolver el aviso de dominio duplicado con
+MedionTech (ambos repos documentan https://123pcsolutions.com.es/
+como su dominio). No se ha tocado nada hasta que se confirme cuál de
+las dos marcas debe quedarse con este dominio, o si alguna necesita
+uno propio.
