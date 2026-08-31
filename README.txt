@@ -79,3 +79,26 @@ MedionTech (ambos repos documentan https://123pcsolutions.com.es/
 como su dominio). No se ha tocado nada hasta que se confirme cuál de
 las dos marcas debe quedarse con este dominio, o si alguna necesita
 uno propio.
+
+REVISIÓN ADICIONAL (checklist unificado de la familia, a petición del cliente):
+- Añadida la franja de aviso de servicio técnico independiente
+  ("Somos un servicio técnico independiente. No vemos equipos en
+  garantía.") justo debajo de la cabecera, en las 47 páginas que
+  comparten el header estándar (todas menos aviso-legal.html y
+  politica-privacidad.html, que no tienen cabecera). Ya existía el
+  aviso en el footer de cada página; esta franja lo hace visible de
+  inmediato, igual que en el resto de la familia.
+- Enlace de política de privacidad del formulario (solo en index.html,
+  es la única página con formulario): apuntaba a la página legal
+  interna /politica-privacidad.html; cambiado al enlace estándar de
+  toda la familia, https://kelatos.com/privacy-policy/, y resaltado en
+  azul (antes solo llevaba subrayado, sin color).
+- Horario: "Sábados y domingos: cerrado" → "Sábados, domingos y días
+  festivos: cerrado" (solo en index.html, único sitio donde aparece).
+- Verificado: sin elemento .hero-chip/.hero-tag; sin textos
+  decorativos gigantes tipo "HARDWARE" (este diseño no usa ese
+  patrón); iconos ya presentes en los botones de acción (Bootstrap
+  Icons); schema.org ya usaba correctamente el teléfono de la caja de
+  información. Sin cambios en ninguno de estos.
+- Validado: balance de etiquetas <div> y <a> correcto en las 49
+  páginas tras los cambios.
