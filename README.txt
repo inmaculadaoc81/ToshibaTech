@@ -74,11 +74,10 @@ REVISIÓN ADICIONAL (esta pasada):
 - Confirmado: GA y banner de cookies siguen presentes en las 49
   páginas (verificado por conteo), sin regresiones.
 
-⚠️ RECORDATORIO — sigue sin resolver el aviso de dominio duplicado con
-MedionTech (ambos repos documentan https://123pcsolutions.com.es/
-como su dominio). No se ha tocado nada hasta que se confirme cuál de
-las dos marcas debe quedarse con este dominio, o si alguna necesita
-uno propio.
+RESUELTO — el aviso de dominio duplicado con MedionTech ya se
+solucionó en otra pasada: MedionTech pasó a
+informaticoschamberi.com.es, y ToshibaTech se queda con
+123pcsolutions.com.es en exclusiva. No requiere ninguna acción aquí.
 
 REVISIÓN ADICIONAL (checklist unificado de la familia, a petición del cliente):
 - Añadida la franja de aviso de servicio técnico independiente
