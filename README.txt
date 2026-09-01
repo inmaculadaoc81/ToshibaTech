@@ -1,5 +1,38 @@
 TOSHIBATECH — SERVICIO TÉCNICO DYNABOOK / TOSHIBA (MADRID)
 
+REVISIÓN ADICIONAL (checklist unificado de la familia, a petición del cliente — repo 10/48):
+- BUG REAL — no existía ninguna sección de Cal.com en todo el sitio.
+  Añadida en index.html, entre la sección "proof" (Google
+  Business/YouTube) y "Ubicación": "Reserva una cita de 30 minutos"
+  con el iframe compartido de la familia
+  (https://cal.com/kelatos/30min?embed=true&theme=light&attendeePhoneNumber=%2B34&overlayCalendar=true),
+  720px de alto en escritorio y 760px en móvil. Añadido enlace "Pedir
+  cita" al menú en las 47 páginas que comparten la cabecera completa
+  (todas menos aviso-legal.html y politica-privacidad.html, que solo
+  tienen un enlace de vuelta).
+- Verificado: el correo soporte@kelatos.com solo aparece en el
+  schema.org (dato estructurado no visible), no en el HTML visible de
+  ninguna página.
+- BUG REAL — el mensaje prellenado de WhatsApp decía "¡Hola Kelatos!"
+  en las 47 páginas con cabecera completa (141 apariciones en total:
+  botón "WhatsApp" del header + CTA del hero + flotante). Corregido a
+  "¡Hola ToshibaTech!" en las 47 páginas mediante un script.
+- BUG REAL — el menú móvil (#mainMenu) no tenía ningún listener que lo
+  cerrara al pulsar un enlace del propio menú, en ninguna de las 47
+  páginas. Añadido un script que quita la clase "open" de .nav al
+  hacer clic en cualquier enlace.
+- Verificado: los iconos del sitio son de fuente (Bootstrap Icons,
+  <i class="bi ...">), no SVG/imagen con width/height fijos, así que
+  no hay riesgo de deformación por proporciones incorrectas.
+- BUG REAL — el H1 del hero en móvil (styles.css, compartido por las
+  49 páginas) estaba en 40px. Corregido a 48px. (No se ha tocado
+  ".seo-hero h1", que es un encabezado distinto y más pequeño usado
+  solo en las páginas de /servicios/ y /modelos/, no en la home.)
+- BUG REAL — botones del hero (.action) con border-radius de 12px y
+  sin ningún estado hover. Aumentado a border-radius:999px; añadido
+  filter:brightness(.88) en los tres (wa, pickup, call — los tres ya
+  tenían fondo sólido de color, sin necesitar un caso especial).
+
 Sitio multipágina grande: home + aviso-legal + política de privacidad +
 20 páginas de servicio (/servicios/) + 26 páginas de modelo (/modelos/)
 = 49 páginas en total. NO se ha convertido a one-page (a diferencia de
