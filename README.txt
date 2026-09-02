@@ -134,3 +134,11 @@ REVISIÓN ADICIONAL (checklist unificado de la familia, a petición del cliente)
   información. Sin cambios en ninguno de estos.
 - Validado: balance de etiquetas <div> y <a> correcto en las 49
   páginas tras los cambios.
+
+REVISIÓN ADICIONAL (nueva regla de menú móvil, a petición del cliente):
+- Verificado en las 49 páginas: la franja de aviso de independencia
+  ya estaba fuera de <header>, como hermana justo después de él (no
+  dentro), así que no se solapa con el menú móvil desplegable.
+- Verificado: el header (.header{position:sticky;top:0}) ya se
+  mantenía fijo/pegado arriba al hacer scroll.
+- Sin cambios de código en este repo: ya cumplía la nueva regla.
