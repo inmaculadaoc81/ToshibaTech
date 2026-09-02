@@ -142,3 +142,47 @@ REVISIÓN ADICIONAL (nueva regla de menú móvil, a petición del cliente):
 - Verificado: el header (.header{position:sticky;top:0}) ya se
   mantenía fijo/pegado arriba al hacer scroll.
 - Sin cambios de código en este repo: ya cumplía la nueva regla.
+
+CONVERSIÓN A ONE-PAGE (a petición del cliente):
+Este repositorio era multipágina: servicios/*.html (20 páginas) y
+modelos/*.html (26 páginas) = 46 páginas de catálogo, más index.html,
+aviso-legal.html y politica-privacidad.html = 49 en total. Convertido
+a una sola página de catálogo (index.html), mismo patrón que el resto
+de la familia:
+- Eliminadas las 46 páginas de servicios/ y modelos/. No se ha
+  migrado su contenido — el home ya tenía una sección "Servicios" (6
+  averías de ejemplo, no las 20) y una sección de familias de modelo
+  ("dynabook-zone", con nombres de familia pero sin enlaces por
+  modelo individual), así que la presencia general se mantiene, solo
+  desaparecen las páginas dedicadas a cada avería/modelo concreto.
+- A diferencia de InformaticoChamberi/Dysonweb2 (procesados justo
+  antes), esas dos secciones NO tenían id propio en el HTML. Añadidos
+  id="servicios" a <section class="section services"> e
+  id="modelos" a <section class="section dynabook-zone">, para poder
+  enlazarlas desde el menú.
+- CONSERVADAS aviso-legal.html y politica-privacidad.html: no son
+  páginas de catálogo/SEO, son las páginas legales propias del sitio
+  (a diferencia del resto de la familia, que enlaza externamente a
+  https://kelatos.com/privacy-policy/, este repo aloja las suyas
+  propias). No se han tocado ni movido.
+- Menú: los desplegables "Servicios" (20 enlaces) y "Modelos" (26
+  enlaces) se sustituyeron por un enlace único cada uno → /#servicios
+  y /#modelos. Este repo usa un único <nav id="mainMenu"> reutilizado
+  para escritorio y móvil (no hay un #mobileMenu duplicado), así que
+  un solo cambio cubre ambas versiones.
+- Los 6 enlaces de la sección "Servicios" (antes /servicios/*.html) y
+  el enlace "Explorar modelos →" de la sección "Modelos" (antes
+  apuntaba a un modelo concreto, /modelos/portege-z40l-p) ahora
+  apuntan a /#contacto.
+- Añadido middleware.mjs (mismo patrón que el resto de la familia),
+  con una lista blanca para /aviso-legal y /politica-privacidad (no
+  deben redirigir, son páginas reales que se conservan). Añadida la
+  dependencia "@vercel/functions" en package.json. NOTA IMPORTANTE:
+  se comprobó en producción que este mismo patrón, ya usado en ~16
+  repos de la familia, no está redirigiendo realmente en Vercel (da
+  404 en vez de 301) — pendiente de investigar la causa raíz como
+  tarea aparte. Se mantiene por consistencia; documentado también en
+  el propio middleware.mjs.
+- sitemap.xml reducido a 3 <url>: home, aviso-legal y
+  politica-privacidad (antes no incluía ninguna de las dos páginas
+  legales, a pesar de que ya existían; corregido de paso).
