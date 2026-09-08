@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 Disallow: /api/
-Sitemap: https://123pcsolutions.com.es/sitemap.xml
+Sitemap: https://informaticoschamberi.com.es/sitemap.xml

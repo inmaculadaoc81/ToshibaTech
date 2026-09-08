@@ -186,3 +186,20 @@ de la familia:
 - sitemap.xml reducido a 3 <url>: home, aviso-legal y
   politica-privacidad (antes no incluía ninguna de las dos páginas
   legales, a pesar de que ya existían; corregido de paso).
+
+CORRECCIÓN DE DOMINIO (confirmado por el cliente):
+- BUG REAL — el dominio real de ToshibaTech es
+  informaticoschamberi.com.es (confirmado directamente por el
+  cliente), NO 123pcsolutions.com.es como usaba el código hasta
+  ahora. Ese dominio (123pcsolutions.com.es) resultó pertenecer en
+  realidad a MedionTech, otro repo de la familia que lo tenía mal
+  configurado (corregido por separado, mismo día). Nota: el dominio
+  informaticoschamberi.com.es actualmente sirve un sitio WordPress
+  con temática de "Reparación de ordenadores Dynabook" — coincide
+  temáticamente con esta marca (ToshibaTech/Dynabook), así que
+  probablemente sea el sitio antiguo/paralelo que hay que sustituir
+  por este despliegue de Vercel en el panel de dominios; eso no se
+  puede hacer desde el código.
+- Corregido a informaticoschamberi.com.es en canonical, og:url,
+  JSON-LD (@id del negocio y del provider del Service, campo "url"),
+  sitemap.xml y robots.txt.
